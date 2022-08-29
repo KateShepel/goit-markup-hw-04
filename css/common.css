@@ -47,6 +47,17 @@ p {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
@@ -166,30 +177,50 @@ ul {
   color: var(--primary-text-color);
   text-decoration: none;
 }
-.contacts a:hover,
+/* .contacts a:hover,
 .contacts a:focus {
   color: var(--accent-color);
+} */
+
+.item .icon-envelope,
+.item .icon-smartphone {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+.item:hover a {
+  color: var(--accent-color);
+}
+.item:hover .icon-envelope,
+.item:focus .icon-envelope,
+.item:hover .icon-smartphone,
+.item:focus .icon-smartphone {
+  fill: var(--accent-color);
 }
 
-.contacts .item::before {
+.contacts .item {
+  display: flex;
+  align-items: center;
+}
+
+/* .contacts .item::before {
   display: inline-block;
   content: "";
   background-size: conain;
   background-position: center;
   margin-right: 10px;
-}
+} */
 
-.icon-envelope::before {
+/* .icon-envelope::before {
   width: 16px;
   height: 12px;
   background-image: url(../imagescss/envelope.svg);
-}
+} */
 
-.icon-smartphone::before {
+/* .icon-smartphone::before {
   width: 10px;
   height: 16px;
   background-image: url(../imagescss/smartphone.svg);
-}
+} */
 
 /* Footer */
 .footer {
@@ -248,7 +279,7 @@ ul {
   gap: 10px;
 }
 
-.footer-webs-link .link {
+.footer-webs-link li {
   outline: 1px solid blue;
   width: 44px;
   height: 44px;
@@ -259,22 +290,19 @@ ul {
   border-radius: 50%;
 }
 
-.footer-webs-link .link::before {
-  content: "";
+/* .footer-webs-link li {
   display: block;
   outline: 1px solid red;
-  width: 20px;
-  height: 20px;
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
-}
+} */
 
-.footer-webs-link .icon-instagram::before {
+/* .footer-webs-link .icon-instagram::before {
   background-image: url(../imagescss/instagramwhite.svg);
-}
+} */
 
-.footer-webs-link .icon-twiter::before {
+/* .footer-webs-link .icon-twiter::before {
   background-image: url(../imagescss/twitterwhite.svg);
 }
 
@@ -284,9 +312,9 @@ ul {
 
 .footer-webs-link .icon-linkedin::before {
   background-image: url(../imagescss/linkedinwhite.svg);
-}
+} */
 
-.footer-webs-link .link:hover,
-.footer-webs-link .link:focus {
+.footer-webs-link li:hover,
+.footer-webs-link li:focus {
   background-color: var(--accent-color);
 }

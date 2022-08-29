@@ -108,7 +108,19 @@ h3 {
   line-height: 1.71;
 }
 
-.list-item::before {
+.list-item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-position: center;
+  background-color: var(--bg-light-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+/* .list-item::before {
   display: block;
   content: "";
   height: 120px;
@@ -134,7 +146,7 @@ h3 {
 
 .icon-astronaut::before {
   background-image: url(../imagescss/astronaut.svg);
-}
+} */
 
 /* Team */
 .team {
@@ -187,7 +199,7 @@ h3 {
   gap: 10px;
 }
 
-.webs-link .link {
+.webs-link li {
   width: 44px;
   height: 44px;
   display: flex;
@@ -199,7 +211,21 @@ h3 {
   /* cursor: pointer; */
 }
 
-.webs-link .link::before {
+.webs-link-icon {
+  fill: var(--primary-text-color);
+}
+
+.webs-link li:hover,
+.webs-link li:focus {
+  background-color: var(--accent-color);
+}
+
+.webs-link li:hover .webs-link-icon,
+.webs-link li:focus .webs-link-icon {
+  fill: var(--primary-white-color);
+}
+
+/* .webs-link .link::before {
   content: "";
   display: block;
 
@@ -209,9 +235,9 @@ h3 {
   background-size: contain;
   background-position: 50%;
   background-repeat: no-repeat;
-}
+} */
 
-.webs-link .icon-instagram::before {
+/* .webs-link .icon-instagram::before {
   background-image: url(../imagescss/instagram.svg);
 }
 
@@ -230,7 +256,7 @@ h3 {
 .webs-link .link:hover,
 .webs-link .link:focus {
   background-color: var(--accent-color);
-}
+} */
 
 /* Clients */
 .titel-clients {
@@ -248,4 +274,18 @@ h3 {
   border: 1px solid var(--border-color);
   border-radius: 4px;
   cursor: pointer;
+}
+
+.client-logo {
+  fill: var(--border-color);
+}
+
+.client:hover,
+.client:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.client:hover .client-logo,
+.client:focus .client-logo {
+  fill: var(--accent-color);
 }
